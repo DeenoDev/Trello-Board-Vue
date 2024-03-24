@@ -1,7 +1,10 @@
 <template>
     <div>
-        <div v-for="column in columns">
-        
+        <div v-for="column in columns" key="column.id">
+            <header>
+                {{ column.title }}
+            </header>
+            <p v-for="task in column.tasks" :key="column.id"></p>
         </div>
     </div>
 
