@@ -4,7 +4,7 @@
             <header class="font-bold mb-4">
                 {{ column.title }}
             </header>
-            <TrelloBoardTask v-for="task in column.tasks" :task="task"/> 
+            <TrelloBoardTask v-for="task in column.tasks" :task="task" :key="task.id"/> 
             <footer>
                 <button class="text-gray-500">
                     Add a Card
@@ -18,6 +18,7 @@
 <script setup lang="ts">
 import { nanoid } from 'nanoid';
 import type { Column } from '~~/types';
+import draggable from "vuedraggable";
 const columns = ref<Column[]>([
     {
         id: nanoid(),
