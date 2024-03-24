@@ -4,7 +4,9 @@
             <header>
                 {{ column.title }}
             </header>
-            <p v-for="task in column.tasks" :key="column.id"></p>
+            <p v-for="task in column.tasks" :key="column.id">
+                {{ task.title }}
+            </p>
         </div>
     </div>
 
