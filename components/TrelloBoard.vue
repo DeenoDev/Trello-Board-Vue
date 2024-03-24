@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div v-for="column in columns" key="column.id">
+    <div class="flex gap-4 overflow-x-auto items-start">
+        <div v-for="column in columns" key="column.id" class="column bg-gray-200">
             <header>
                 {{ column.title }}
             </header>
