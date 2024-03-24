@@ -5,9 +5,6 @@
                 {{ column.title }}
             </header>
             <TrelloBoardTask v-for="task in column.tasks" :task="task"/> 
-            <p v-for="task in column.tasks" :key="column.id">
-                {{ task.title }}
-            </p>
         </div>
     </div>
 
