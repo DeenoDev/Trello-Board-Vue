@@ -75,7 +75,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/a5fdb8c0-bc32-4ae2-b9a1-7d33bd73aa5f.json"
+        "./manifest/meta/dev"
       ],
       "#build": [
         "."
@@ -110,6 +110,8 @@
     "./nuxt.d.ts",
     "../.config/nuxt.*",
     "../**/*",
+    "../node_modules/@nuxtjs/tailwindcss/runtime",
+    "../node_modules/@vueuse/nuxt/runtime",
     "../node_modules/@nuxt/devtools/runtime",
     "../node_modules/@nuxt/telemetry/runtime",
     ".."
@@ -117,6 +119,8 @@
   "exclude": [
     "../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../node_modules/@vueuse/nuxt/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "../dist",
