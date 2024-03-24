@@ -11,13 +11,22 @@
         <template #item="{element: column}: {element: Column}">
             <div class="column bg-gray-200 p-5 rounded min-w-[250px]">
               <header class="font-bold mb-4">
-                <span class="drag-handle cursor-move"> 🖐️ </span>
+                <DragHandle />
                  {{ column.title }}
               </header>
+              <draggable 
+              v-model="columns"
+              group="columns"
+              :animation="150"
+              handle=".drag-handle"
+              item-key="id"
+              class="flex gap-4 overflow-x-auto items-start"
+         >
               <TrelloBoardTask v-for="task in column.tasks" 
               :key="task.id"
               :task="task" 
               /> 
+              </draggable>
             <footer>
                 <button class="text-gray-500">
                     Add a Card
