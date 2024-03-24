@@ -1,4 +1,9 @@
 <template>
+    <div>
+        <div v-for="column in columns">
+        
+        </div>
+    </div>
 
 </template>
 
