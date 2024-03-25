@@ -24,7 +24,7 @@
               >
               <template #item="{ element: task } : { element: Task }">
                 <div>
-                    <TrelloBoardTask :task="task" /> 
+                    <TrelloBoardTask :task="task" @delete="column.tasks = column.tasks.filter(t=> t.id !== $event)" /> 
                 </div>
               </template>
               

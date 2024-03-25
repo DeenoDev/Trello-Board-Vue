@@ -15,18 +15,18 @@
 </template>
 
 <script setup lang="ts">
-import type {Task} from '~~/types';
+import type {Task, ID} from '~~/types';
 
 const props = defineProps<{
     task: Task
 }>();
 
-const emit = defineEmits<{(e: "delete", payload: string): void}>();
+const emit = defineEmits<{(e: "delete", payload: ID): void}>();
 
 const focused = ref(false);
 onKeyStroke("Backspace", (e)=>{
     if(focused.value) emit("delete", props.task.id)
-})
+});
 </script>
 
 <style>
