@@ -1,7 +1,7 @@
 <template>
     <div :title="task.createdAt.toLocaleDateString()"
           class="task bg-white p-2 mb-2 rounded shadow-sm max-w-[250px] flex">
-          <DragHandle class="pr-2"/>
+          <DragHandle class="pr-2" />
         <span>
             {{ task.title }}
         </span>
@@ -17,3 +17,20 @@ defineProps<{
     task: Task
 }>();
 </script>
+
+<style>
+ .sortable-chosen{
+    background: green;
+
+ }
+
+ .sortable-drag .task{
+    transform: rotate(5deg);
+
+
+ }
+
+ .sortable-ghost{
+    background: blue;
+ }
+</style>

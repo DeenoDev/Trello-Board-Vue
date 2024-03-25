@@ -19,11 +19,13 @@
               :group="{name: 'tasks', pull: ctrl ? 'clone' : true }"
               handle=".drag-handle"
               :animation="150"
+              
               item-key="id"
               >
               <template #item="{ element: task } : { element: Task }">
-                <TrelloBoardTask 
-              :task="task" /> 
+                <div>
+                    <TrelloBoardTask :task="task" /> 
+                </div>
               </template>
               
               </draggable>
@@ -76,18 +78,3 @@ const columns = ref<Column[]>([
 const ctrl = useKeyModifier("Control")
 </script>
 
-<style>
- .sortable-chosen{
-    background: green;
-
- }
-
- .sortable-drag{
-    background: red;
-
- }
-
- .sortable-ghost{
-    background: blue;
- }
-</style>
