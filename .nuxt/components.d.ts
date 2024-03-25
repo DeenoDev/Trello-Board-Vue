@@ -2,6 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'DragHandle': typeof import("../components/DragHandle.vue")['default']
+    'NewTask': typeof import("../components/NewTask.vue")['default']
     'TrelloBoard': typeof import("../components/TrelloBoard.vue")['default']
     'TrelloBoardTask': typeof import("../components/TrelloBoardTask.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -26,6 +27,7 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyDragHandle': typeof import("../components/DragHandle.vue")['default']
+    'LazyNewTask': typeof import("../components/NewTask.vue")['default']
     'LazyTrelloBoard': typeof import("../components/TrelloBoard.vue")['default']
     'LazyTrelloBoardTask': typeof import("../components/TrelloBoardTask.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -53,6 +55,7 @@ declare module 'vue' {
 }
 
 export const DragHandle: typeof import("../components/DragHandle.vue")['default']
+export const NewTask: typeof import("../components/NewTask.vue")['default']
 export const TrelloBoard: typeof import("../components/TrelloBoard.vue")['default']
 export const TrelloBoardTask: typeof import("../components/TrelloBoardTask.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -77,6 +80,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyDragHandle: typeof import("../components/DragHandle.vue")['default']
+export const LazyNewTask: typeof import("../components/NewTask.vue")['default']
 export const LazyTrelloBoard: typeof import("../components/TrelloBoard.vue")['default']
 export const LazyTrelloBoardTask: typeof import("../components/TrelloBoardTask.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']

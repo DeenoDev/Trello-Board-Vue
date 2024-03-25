@@ -19,10 +19,6 @@ defineProps<{
 </script>
 
 <style>
- .sortable-chosen{
-    background: green;
-
- }
 
  .sortable-drag .task{
     transform: rotate(5deg);
@@ -30,7 +26,12 @@ defineProps<{
 
  }
 
- .sortable-ghost{
-    background: blue;
+ .sortable-ghost .task{
+    position: relative;
+ }
+
+ .sortable-ghost .task::after{
+    content: "";
+    @apply absolute top-0 bottom-0 left-0 right-0 bg-slate-300 rounded;
  }
 </style>
