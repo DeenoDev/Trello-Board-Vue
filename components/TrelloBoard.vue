@@ -39,6 +39,10 @@
            </div>
          </template>
         </draggable>
+        <button @click="createColumn"
+        class="bg-gray-200 whitespace-nowrap p-2 rounded opacity-50">
+            
+        </button>
     </div>
  </template>   
 
