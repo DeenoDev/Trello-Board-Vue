@@ -1,7 +1,10 @@
 <template>
     <div :title="task.createdAt.toLocaleDateString()"
-          class="task bg-white p-2 mb-2 rounded shadow-sm max-w-[250px] flex">
-          <DragHandle class="pr-2" />
+          class="task bg-white p-2 mb-2 rounded shadow-sm max-w-[250px] flex"
+          @focus="focused = true"
+          @blur="focused = false"
+          tabindex="0" >
+          <DragHandle class="pr-2"/>
         <span>
             {{ task.title }}
         </span>
@@ -16,6 +19,8 @@ import type {Task} from '~~/types';
 defineProps<{
     task: Task
 }>();
+
+const focused = ref(false);
 </script>
 
 <style>

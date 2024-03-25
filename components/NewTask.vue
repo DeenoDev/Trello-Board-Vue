@@ -3,7 +3,7 @@
         <textarea v-model="title"
                   @keydown.tab="createTask" 
                   @keyup.enter="createTask"
-                  class="focus:bg-white focus:shadow resize-none rounded w-full border-none hover: pointer" 
+                  class="focus:bg-white focus:shadow resize-none rounded w-full border-none hover:cursor-pointer" 
                   :class="{
                     'h-7': !focused,
                     'h-20': focused,
