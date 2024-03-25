@@ -75,3 +75,19 @@ const columns = ref<Column[]>([
 
 const ctrl = useKeyModifier("Control")
 </script>
+
+<style>
+ .sortable-chosen{
+    background: green;
+
+ }
+
+ .sortable-drag{
+    background: red;
+
+ }
+
+ .sortable-ghost{
+    background: blue;
+ }
+</style>
