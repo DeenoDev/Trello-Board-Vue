@@ -16,12 +16,12 @@
               </header>
               <draggable 
               v-model="column.tasks"
-              :group="{name: 'tasks', pull: alt ? 'clone' : true }"
+              :group="{name: 'tasks', pull: ctrl ? 'clone' : true }"
               handle=".drag-handle"
               :animation="150"
               item-key="id"
               >
-              <template #item="{element: task} : {element: Task}">
+              <template #item="{ element: task } : { element: Task }">
                 <TrelloBoardTask 
               :task="task" /> 
               </template>
@@ -73,5 +73,5 @@ const columns = ref<Column[]>([
     
 ]);
 
-useKeyModifier("Alt")
+const ctrl = useKeyModifier("Control")
 </script>
