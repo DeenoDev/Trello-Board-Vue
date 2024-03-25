@@ -81,6 +81,16 @@ const columns = ref<Column[]>([
     
 ]);
 
-const ctrl = useKeyModifier("Control")
+const ctrl = useKeyModifier("Control");
+
+function createColumn(){
+    const column: Column = {
+        id: nanoid(),
+        title: "",
+        tasks: [],
+    }
+    columns.value.push(column);
+}
+
 </script>
 
