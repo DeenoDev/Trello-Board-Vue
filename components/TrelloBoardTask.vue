@@ -1,5 +1,5 @@
 <template>
-    <div :title="task.createdAt.toLocaleDateString()"
+    <div :title="new Date(task.createdAt).toLocaleDateString()"
           class="task bg-white p-2 mb-2 rounded shadow-sm max-w-[220px] flex"
           @focus="focused = true"
           @blur="focused = false"
@@ -15,6 +15,7 @@
 </template>
 
 <script setup lang="ts">
+
 import type {Task, ID} from '~~/types';
 
 const props = defineProps<{

@@ -14,6 +14,7 @@
                 <DragHandle />
                  <input class="title-input bg-transparent focus:bg-white rounded px-1 w-4/5" 
                  @keyup.enter="($event.target as HTMLInputElement).blur()" 
+                 @keydown.backspace="column.title ==='' ? columns = columns.filter(c=> c.id !== column.id) : null"
                  type="text"
                  v-model="column.title">
                  
@@ -52,10 +53,10 @@
 import { nanoid } from 'nanoid';
 import type { Column, Task } from '~~/types';
 import draggable from "vuedraggable";
-const columns = ref<Column[]>([
+const columns = useLocalStorage<Column[]>("trelloBoard",[
     {
-        id: nanoid(),
         title: "Backlog",
+        id: nanoid(),
         tasks: [
         {
             title: "Create marketing landing page", 
